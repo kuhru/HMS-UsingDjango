@@ -2,7 +2,7 @@
 A Django based project primarily for learning about Django and integration with SQLite as well usage of Bootstrap.
 
 #### REQUIREMENTS
-#### Django==3.0.6
+Django==3.0.6
 
 ### Current State:
 BaseApp: is the main pages of the page, like about, contact etc. Contact Form is collected to SQLite.
