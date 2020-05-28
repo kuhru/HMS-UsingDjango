@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content%}
+
+<form method="POST" action="/register/">{% csrf_token %}
+    <!-- NAME -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">First Name</span>
+        </div>
+        <input type="text" name="fname" aria-label="First name" class="form-control" placeholder="First Name">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Last Name</span>
+        </div>
+        <input type="text" name="lname" aria-label="Last name" class="form-control" placeholder="Last Name">
+    </div>
+
+    <!-- USERNAME -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" name="uname" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+
+    <!-- EMAIL -->
+    <div class="input-group mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Your Email Address" aria-label="Your Email Address" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2">@example.com</span>
+        </div>
+    </div>
+
+    <!-- PASSWORD -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Password</span>
+        </div>
+        <input type="password" name="pw" aria-label="Password" class="form-control" placeholder="Enter Password Here">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Password</span>
+        </div>
+        <input type="password" name="cpw" aria-label="Confirm Password" class="form-control" placeholder="Confirm Password">
+    </div>
+
+    <!-- RADIO BUTTON -->
+    <div class="form-check form-check-inline">
+        <label class="btn btn-primary active">
+            <input type="radio" name="options" id="option1 id_options_0" checked> Patient
+        </label>
+        <label class="btn btn-info">
+            <input type="radio" name="options" id="option2 id_options_1"> Doctor
+        </label>
+    </div>
+
+    <!-- SUBMIT BUTTONS -->
+    <div class="d-flex flex-row-reverse mb-3">
+        <button type="submit" class="mt-5 ml-3 btn btn-dark">Submit</button>
+        <button type="reset" class="mt-5 btn btn-dark">Reset</button>
+    </div>
+</form>
+
+{% endblock %}

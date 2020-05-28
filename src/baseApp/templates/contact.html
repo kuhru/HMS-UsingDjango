@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content%}
+
+<form action="." method="POST">{% csrf_token %}
+    <!-- TITLE BOX -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Title</span>
+        </div>
+        <input type="text" name="title" class="form-control" id="basic-url" placeholder="Your Problem" aria-describedby="basic-addon3" required>
+    </div>
+
+    <!-- NAME BOX -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">FullName</span>
+        </div>
+        <input type="text" name="full_name" class="form-control" id="basic-url" placeholder="Your Name" aria-describedby="basic-addon3" required>
+    </div>
+
+    <!-- USER EMAIL BOX -->
+    <div class="input-group mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Your Contact Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+        <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2">@example.com</span>
+        </div>
+    </div>
+
+    <!-- DESCRIPTION BOX -->
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Description</span>
+        </div>
+        <textarea class="form-control" name="description" placeholder="Elaborate Please" aria-label="With textarea" rows="12" required></textarea>
+    </div>
+
+    <!-- SUBMIT BUTTONS -->
+    <div class="d-flex flex-row-reverse mb-3">
+        <button type="submit" class="mt-5 ml-3 btn btn-dark">Submit</button>
+        <button type="reset" class="mt-5 btn btn-dark">Reset</button>
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">H*pital</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item mr-auto d-flex">
+                <a class="nav-link" href="/contact">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown" style="left: 0;">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Account
+                </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {% if user.is_authenticated %}
+                    <a class="dropdown-item" href="/profile">Profile</a>
+                    <a class="dropdown-item" href="/appointments/">Appointments</a>
+                    <a class="dropdown-item" href="/invoices">Invoices</a>
+                    <a class="dropdown-item" href="/medical-history">Medical History</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/">Log Out</a>
+                    <button class="dropdown-item" style="outline-width: 0px;"">wow</button>
+                {% else %}
+                    <a class="dropdown-item" href="/register">New User? <h5 style="color: #0adf3f;">Register!</h5></a>
+                    <a class="dropdown-item" href="/login">Existing User? <h5 style="color: #0adf3f">Login!</h5></a>
+                {% endif %}
+            </div>
+            </li>
+        </ul>
+    </div>
+</nav>

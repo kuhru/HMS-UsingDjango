@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content%}
+    {% for object in object_list %}
+        <h1>{{ object.problem }}</h1>
+        <h3>{{ object.details }}</h3>
+        <i>{{ object.creation_time }}</i>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content%}
+
+<form method="POST" action>{% csrf_token %}
+    <div class="col-9 mx-auto">
+        <!-- USERNAME -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Password</span>
+            </div>
+            <input type="password" aria-label="Last name" class="form-control" placeholder="Password">
+        </div>
+
+        <!-- SUBMIT BUTTONS -->
+        <div class="d-flex flex-row-reverse mb-3">
+            <button type="submit" class="mt-5 ml-3 btn btn-dark">Submit</button>
+            <button type="reset" class="mt-5 btn btn-dark">Reset</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
